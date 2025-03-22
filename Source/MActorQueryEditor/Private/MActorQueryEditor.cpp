@@ -11,14 +11,20 @@
 
 void FMActorQueryEditorModule::StartupModule()
 {
-	GUnrealEd->RegisterComponentVisualizer(
-		UMActorQueryComponent::StaticClass()->GetFName(),
-		MakeShareable(new FMActorQueryComponentVisualizer));
+	if (GUnrealEd != nullptr)
+	{
+		GUnrealEd->RegisterComponentVisualizer(
+			UMActorQueryComponent::StaticClass()->GetFName(),
+			MakeShareable(new FMActorQueryComponentVisualizer));
+	}
 }
 
 void FMActorQueryEditorModule::ShutdownModule()
 {
-	GUnrealEd->UnregisterComponentVisualizer(UMActorQueryComponent::StaticClass()->GetFName());
+	if (GUnrealEd != nullptr)
+	{
+		GUnrealEd->UnregisterComponentVisualizer(UMActorQueryComponent::StaticClass()->GetFName());
+	}
 }
 
 #undef LOCTEXT_NAMESPACE
