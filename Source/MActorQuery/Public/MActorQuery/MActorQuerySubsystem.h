@@ -35,9 +35,6 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(
 DECLARE_MULTICAST_DELEGATE_OneParam(FMActorQueryComponentOnCreatedSignature, UMActorQueryComponent*)
 DECLARE_MULTICAST_DELEGATE_OneParam(FMActorQueryComponentOnDestroyedSignature, UMActorQueryComponent*)
 
-/**
-* 
-*/
 UCLASS()
 class MACTORQUERY_API UMActorQuerySubsystem final : public UWorldSubsystem
 {
@@ -60,6 +57,7 @@ public:
 		return nullptr;
 	}
 
+#if WITH_EDITOR
 	static UMActorQuerySubsystem* GetEditorSubsystem()
 	{
 		if (IsValid(GEditor))
@@ -73,6 +71,7 @@ public:
 
 		return nullptr;
 	}
+#endif
 
 	UMActorQuerySubsystem();
 
