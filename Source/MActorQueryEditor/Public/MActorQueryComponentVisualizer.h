@@ -7,7 +7,7 @@
 #include "ComponentVisualizer.h"
 
 /**
- * 
+ * Draws Query Tag on screen
  */
 class FMActorQueryComponentVisualizer : public FComponentVisualizer
 {
