@@ -1,4 +1,4 @@
-// Copyright ZAKAZANE Studio. All Rights Reserved.
+// Copyright (c) Miknios. All rights reserved.
 
 #include "MActorQuery/MActorQueryTypes.h"
 

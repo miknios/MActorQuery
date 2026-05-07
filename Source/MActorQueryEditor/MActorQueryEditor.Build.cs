@@ -1,4 +1,6 @@
-﻿using UnrealBuildTool;
+﻿// Copyright (c) Miknios. All rights reserved.
+
+using UnrealBuildTool;
 
 public class MActorQueryEditor : ModuleRules
 {
